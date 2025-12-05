@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Research Paper Simplifier & Summarizer",
+  "version": "1.0",
+  "description": "Highlight any complex text from PDFs or articles to get a simpler explanation & summary.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js", "tooltip.js"],
+      "css": ["highlight.css"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
